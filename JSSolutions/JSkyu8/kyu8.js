@@ -360,3 +360,18 @@ let newString=""
   }
 return newString
 }
+
+/*This time no story, no theory. The examples below show you how to write function accum:
+Examples:
+accum("abcd") -> "A-Bb-Ccc-Dddd"
+accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+accum("cwAt") -> "C-Ww-Aaa-Tttt"*/
+
+function accum(s) {
+  let string = "";
+  for (let i = 0; i < s.length; i++) {
+    const char = s[i].toLowerCase();
+    string += char.toUpperCase() + char.repeat(i).toLowerCase() + "-";
+  }
+  return string.slice(0, -1);
+}
