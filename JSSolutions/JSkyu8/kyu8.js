@@ -281,3 +281,15 @@ Examples
 function stray(numbers) {
 return numbers.sort((a,b)=>a-b)[0]===numbers[1]?numbers[numbers.length-1]:numbers[0]
 }
+
+/*Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. 
+You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. 
+Be careful, there shouldn't be a space at the beginning or the end of the sentence!*/
+
+function smash (words) {
+let word=""
+   for(let i=0; i<words.length; i++){
+     word+=words[i]+" "
+   }
+return word.trim()
+};
