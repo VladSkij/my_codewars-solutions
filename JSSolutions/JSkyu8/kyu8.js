@@ -390,3 +390,17 @@ function powersOfTwo(n){
   }
 return arr;
 }
+
+/**Write a function that when given a URL as a string, parses out just the domain name and returns it as a string. For example:
+
+* url = "http://github.com/carbonfive/raygun" -> domain name = "github"
+* url = "http://www.zombie-bites.com"         -> domain name = "zombie-bites"
+* url = "https://www.cnet.com"                -> domain name = cnet" */
+
+function domainName(url) {
+  let urlParts = url.split("//");
+  let noProtocol = urlParts.length > 1 ? urlParts[1] : urlParts[0]; 
+  let noWww = noProtocol.startsWith("www.") ? noProtocol.slice(4) : noProtocol; 
+  let host = noWww.split("."); 
+  return host[0]; 
+}
