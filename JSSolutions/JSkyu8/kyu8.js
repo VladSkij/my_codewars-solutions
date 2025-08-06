@@ -716,3 +716,20 @@ function getGrade (s1, s2, s3) {
   var s = (s1 + s2 + s3) / 3
   return s >= 90 ? "A" : s >= 80 ? "B" : s >= 70 ? "C" : s >= 60 ? "D" : "F"
 }
+
+/**You get an array of numbers, return the sum of all of the positives ones.
+Example [1, -4, 7, 12] => 
+1
++
+7
++
+12
+=
+20
+1+7+12=20
+ */
+
+function positiveSum(arr) {
+  let positive = arr.filter(num=>num>=0);
+  return positive.reduce((sum, num)=>sum+num,0)
+}
