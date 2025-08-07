@@ -841,3 +841,9 @@ Inputs and the expected output will never exceed the signed 32-bit integer limit
 function sumStr(a,b) {
   return Number(a)+Number(b)+''
 }
+
+/**Now you have to write a function that takes an argument and returns the square of it. */
+
+function square(a){
+  return a*a
+}
